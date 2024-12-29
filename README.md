@@ -1,8 +1,7 @@
 # Google Docs Clone
 
-A Google Docs clone built with Next.js 15 and React 19.
+A Docs with gpt integrated
 
-By [codewithantonio.com](https://codewithantonio.com)
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ By [codewithantonio.com](https://codewithantonio.com)
 
    Using npm:
    ```bash
-   npm install --legacy-peer-deps  # Required due to React 19 RC
+   npm install --force #--legacy-peer-deps  # or# Required due to React 19 RC
    ```
 
    Using bun:
