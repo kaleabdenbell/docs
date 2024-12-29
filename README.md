@@ -1,4 +1,4 @@
-# Google Docs Clone
+# Docs
 
 A Docs with gpt integrated
 
