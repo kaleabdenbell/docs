@@ -1,7 +1,4 @@
-# Docs
-
-A Docs with gpt integrated
-
+# Docs with gpt integrated
 
 ## Prerequisites
 
@@ -13,19 +10,23 @@ A Docs with gpt integrated
 1. Install dependencies:
 
    Using npm:
+
    ```bash
    npm install --force #--legacy-peer-deps  # or# Required due to React 19 RC
    ```
 
    Using bun:
+
    ```bash
    bun install
    ```
 
 2. Set up your environment variables:
+
    ```bash
    cp .env.example .env.local
    ```
+
    Then fill in the required environment variables in `.env.local`
 
 3. Start the development servers:
@@ -33,6 +34,7 @@ A Docs with gpt integrated
    You need to run both commands simultaneously in different terminal windows:
 
    Terminal 1 - Next.js server:
+
    ```bash
    npm run dev
    # or
@@ -40,6 +42,7 @@ A Docs with gpt integrated
    ```
 
    Terminal 2 - Convex server:
+
    ```bash
    npx convex dev
    # or
@@ -59,6 +62,7 @@ Users of bun can install normally without any special flags.
 To deploy on Vercel, use the following commands:
 
 1. Replace the build command:
+
    ```bash
    npx convex deploy --cmd 'npm run build'
    # or
