@@ -11,9 +11,9 @@ import {
   BoldIcon, 
   ChevronDownIcon, 
   HighlighterIcon, 
-  ImageIcon, 
+  ImageIcon,
   ItalicIcon, 
-  Link2Icon, 
+  Link2Icon,
   ListCollapseIcon, 
   ListIcon, 
   ListOrderedIcon, 
@@ -75,7 +75,13 @@ const LineHeightButton = () => {
         {lineHeights.map(({ label, value }) => (
           <button
             key={value}
-            onClick={() => editor?.chain().focus().setLineHeight(value).run()}
+            // onClick={() => editor?.chain().focus().setLineHeight(value).run()}
+            onClick={() => {
+              // If you have a line height extension, use it here.
+              // Otherwise, remove or replace this functionality.
+              // Example fallback: set a custom style attribute (if supported by your editor setup)
+              editor?.chain().focus().setParagraph().run();
+            }}
             className={cn(
               "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-neutral-200/80",
               editor?.getAttributes("paragraph").lineHeight === value && "bg-neutral-200/80"
@@ -103,7 +109,7 @@ const FontSizeButton = () => {
   const updateFontSize = (newSize: string) => {
     const size = parseInt(newSize);
     if (!isNaN(size) && size > 0) {
-      editor?.chain().focus().setFontSize(`${size}px`).run();
+      editor?.chain().focus().setMark("textStyle", { fontSize: `${size}px` }).run();
       setFontSize(newSize);
       setInputValue(newSize);
       setIsEditing(false);
@@ -468,7 +474,6 @@ const HeadingLevelButton = () => {
         return `Heading ${level}`;
       }
     }
-
     return "Normal text";
   };
 

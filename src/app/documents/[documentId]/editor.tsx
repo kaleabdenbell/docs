@@ -21,8 +21,6 @@ import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
 import { useStorage } from '@liveblocks/react';
 
 import { useEditorStore } from '@/store/use-editor-store';
-import { FontSizeExtension } from '@/extensions/font-size';
-import { LineHeightExtension } from '@/extensions/line-height';
 import { LEFT_MARGIN_DEFAULT, RIGHT_MARGIN_DEFAULT } from '@/constants/margins';
 
 import { Ruler } from './ruler';
@@ -80,8 +78,6 @@ export const Editor = ({ initialContent }: EditorProps) => {
       StarterKit.configure({
         history: false,
       }),
-      LineHeightExtension,
-      FontSizeExtension,
       TextAlign.configure({
         types: ["heading", "paragraph"]
       }),
