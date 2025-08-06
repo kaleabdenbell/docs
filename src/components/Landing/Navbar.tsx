@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/Landing/LanguageToggle";
 import { useLanguage } from "@/hooks/use-language";
-import { PenTool, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +18,7 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="flex gap-3 items-center shrink-0 pr-6">
         <Link href="/">
-          <Image src="/logo.svg" alt="Logo" width={36} height={36} />
+        <Image src="/logo.svg" alt="Logo" width={36} height={36} />
         </Link>
         <h3 className="text-xl">DocsAI</h3>
       </div>
