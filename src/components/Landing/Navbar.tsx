@@ -1,9 +1,11 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "@/components/Landing/LanguageToggle";
 import { useLanguage } from "@/hooks/use-language";
 import { PenTool, Menu, X } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = () => {
   const { t } = useLanguage();
@@ -14,14 +16,12 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="p-2 bg-gradient-primary rounded-lg">
-              <PenTool className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              DocsAI
-            </span>
-          </div>
+          <div className="flex gap-3 items-center shrink-0 pr-6">
+        <Link href="/">
+          <Image src="/logo.svg" alt="Logo" width={36} height={36} />
+        </Link>
+        <h3 className="text-xl">DocsAI</h3>
+      </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
