@@ -32,10 +32,10 @@ export const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              <Button onClick={() => { window.location.href = '/create'; }} variant="default" size="lg" className="text-lg px-8 py-6">
                 {t('startWriting')}
               </Button>
-              <Button variant="glass" size="lg" className="text-lg px-8 py-6">
+              <Button onClick={() => { window.location.href = '/create'; }} variant="secondary" size="lg" className="text-lg px-8 py-6">
                 <Play className="h-5 w-5 mr-2" />
                 {t('watchDemo')}
               </Button>
@@ -69,10 +69,7 @@ export const HeroSection = () => {
                 className="w-full h-auto rounded-2xl shadow-elegant"
               />
             </div>
-            {/* Floating elements */}
-            <div className="absolute -top-6 -right-6 w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-glow animate-float">
-              <Sparkles className="h-8 w-8 text-accent-foreground" />
-            </div>
+            
           </div>
         </div>
       </div>
