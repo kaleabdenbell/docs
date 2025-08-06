@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import { useRouter } from "next/navigation";
 import { SiGoogledocs } from "react-icons/si";
-import { Building2Icon, CircleUserIcon } from "lucide-react";
+import { Building2Icon, CircleUserIcon, FileText } from "lucide-react";
 
 import { TableCell, TableRow } from "@/components/ui/table";
 
@@ -21,7 +21,7 @@ export const DocumentRow = ({ document }: DocumentRowProps) => {
       className="cursor-pointer"
     >
       <TableCell className="w-[50px]">
-        <SiGoogledocs className="size-6 fill-blue-500" />
+        <FileText className="size-6 text-primary" />
       </TableCell>
       <TableCell className="font-medium md:w-[45%]">
         {document.title}

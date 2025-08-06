@@ -13,6 +13,7 @@ import {
 
 import { DocumentRow } from "./document-row";
 import { Doc } from "../../../convex/_generated/dataModel";
+import { SearchInput } from "./search-input";
 
 interface DocumentsTableProps {
   documents: Doc<"documents">[] | undefined;
@@ -32,6 +33,8 @@ export const DocumentsTable = ({
           <LoaderIcon className="animate-spin text-muted-foreground size-5" />
         </div>
       ) : (
+        <div>
+          <SearchInput/>
         <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent border-none">
@@ -57,6 +60,7 @@ export const DocumentsTable = ({
             </TableBody>
           )}
         </Table>
+        </div>
       )}
       <div className="flex items-center justify-center">
         <Button 
